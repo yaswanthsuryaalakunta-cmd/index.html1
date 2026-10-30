@@ -1,0 +1,505 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creative Portfolio | GitHub Pages</title>
+
+<style>
+
+/* CSS VARIABLES */
+:root {
+    --primary: #8b5cf6;
+    --secondary: #06b6d4;
+    --dark: #111827;
+    --light: #f8fafc;
+    --card: #ffffff;
+    --radius: 18px;
+    --transition: 0.4s ease;
+}
+
+/* GLOBAL STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--light);
+    color: var(--dark);
+}
+
+/* NAVBAR */
+header {
+    background: #111827;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #a78bfa;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: var(--transition);
+}
+
+nav a:hover {
+    color: #a78bfa;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 550px;
+    padding: 100px 10%;
+    display: flex;
+    align-items: center;
+    color: white;
+    background:
+    radial-gradient(circle at 80% 20%, #7c3aed, transparent 35%),
+    linear-gradient(120deg, #111827, #312e81);
+}
+
+.hero-content {
+    max-width: 750px;
+    animation: slideUp 1s ease;
+}
+
+.hero h4 {
+    color: #c4b5fd;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 7vw, 70px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #a78bfa;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #ddd6fe;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    background: var(--primary);
+    color: white;
+    font-weight: bold;
+    border: 2px solid var(--primary);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background: transparent;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px #8b5cf655;
+}
+
+/* COMMON SECTION */
+section:not(.hero) {
+    padding: 75px 10%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.section-description {
+    color: #64748b;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+/* ABOUT */
+.about {
+    background: white;
+}
+
+.about-box {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.9;
+    color: #475569;
+}
+
+/* SKILLS */
+.skills {
+    background: #f1f5f9;
+}
+
+.skill-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill {
+    background: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    color: var(--primary);
+    box-shadow: 0 5px 15px #0000000d;
+    transition: var(--transition);
+}
+
+.skill:hover {
+    background: var(--primary);
+    color: white;
+    transform: scale(1.08);
+}
+
+/* PROJECT CARDS */
+.projects {
+    background: white;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: var(--card);
+    padding: 35px 25px;
+    border-radius: var(--radius);
+    box-shadow: 0 5px 25px #00000010;
+    transition: var(--transition);
+    border: 1px solid #e2e8f0;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 18px 35px #8b5cf633;
+    border-color: var(--primary);
+}
+
+.card-icon {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.card p {
+    color: #64748b;
+    line-height: 1.7;
+}
+
+.card button {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    margin-top: 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.card button:hover {
+    background: #6d28d9;
+    transform: scale(1.06);
+}
+
+/* CONTACT */
+.contact {
+    background: #ede9fe;
+}
+
+.contact p {
+    margin-top: 15px;
+    color: #475569;
+}
+
+/* FOOTER */
+footer {
+    padding: 25px;
+    text-align: center;
+    background: #111827;
+    color: white;
+}
+
+/* ANIMATION */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 800px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
+}
+
+@media(max-width: 550px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding: 75px 8%;
+    }
+
+    nav a {
+        font-size: 13px;
+        margin: 0 5px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<header>
+
+    <div class="logo">MyPortfolio.</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h4>WELCOME TO MY WEBSITE</h4>
+
+        <h1>
+            Creative Ideas.<br>
+            <span>Digital Reality.</span>
+        </h1>
+
+        <p>
+            Explore my portfolio showcasing web development,
+            creative designs and modern technology projects.
+            Building ideas into meaningful digital experiences.
+        </p>
+
+        <a href="#projects" class="btn">
+            Explore My Work →
+        </a>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+
+    <h2 class="section-title">About Me</h2>
+
+    <p class="section-description">
+        Passionate about technology and innovation.
+    </p>
+
+    <div class="about-box">
+
+        I am an aspiring developer interested in web development,
+        modern technologies and creative problem solving.
+
+        I enjoy developing responsive websites and exploring
+        new technologies to improve my technical skills.
+
+    </div>
+
+</section>
+
+<!-- SKILLS -->
+<section class="skills" id="skills">
+
+    <h2 class="section-title">My Skills</h2>
+
+    <p class="section-description">
+        Technologies I work with.
+    </p>
+
+    <div class="skill-container">
+
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Java</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Git</div>
+        <div class="skill">GitHub</div>
+
+    </div>
+
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+
+    <h2 class="section-title">My Projects</h2>
+
+    <p class="section-description">
+        Explore my latest practical work.
+    </p>
+
+    <div class="card-container">
+
+        <div class="card">
+
+            <div class="card-icon">💻</div>
+
+            <h3>Web Development</h3>
+
+            <p>
+                Creating responsive and modern websites
+                using HTML, CSS and JavaScript.
+            </p>
+
+            <button onclick="showDetails('Web Development')">
+                Explore More →
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-icon">🎨</div>
+
+            <h3>UI/UX Design</h3>
+
+            <p>
+                Designing beautiful interfaces with
+                attractive layouts and interactive elements.
+            </p>
+
+            <button onclick="showDetails('UI/UX Design')">
+                Explore More →
+            </button>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-icon">🚀</div>
+
+            <h3>GitHub Project</h3>
+
+            <p>
+                Managing source code and publishing
+                websites using GitHub Pages.
+            </p>
+
+            <button onclick="showDetails('GitHub Project')">
+                Explore More →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+
+    <h2 class="section-title">Let's Connect</h2>
+
+    <p>
+        Thank you for visiting my portfolio website.
+    </p>
+
+    <a href="mailto:hello@example.com" class="btn">
+        Contact Me →
+    </a>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+
+    <p>
+        © 2026 MyPortfolio | Powered by GitHub Pages
+    </p>
+
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+
+function showDetails(project) {
+
+    alert(
+        "Welcome to " + project +
+        "! Thank you for exploring my project."
+    );
+
+}
+
+</script>
+
+</body>
+</html>
