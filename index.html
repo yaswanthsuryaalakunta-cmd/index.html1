@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yaswanth Surya | 3D Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <a class="logo" href="#home">YS.</a>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#project">Project</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <header id="home" class="hero">
+    <div>
+      <p class="eyebrow">ASPIRING EEE ENGINEER</p>
+      <h1>Alakunta<br><span>Yaswanth Surya</span></h1>
+      <p class="description">
+        Aspiring Electrical and Electronics Engineering professional
+        seeking opportunities to enhance my skills, gain hands-on
+        experience, and contribute through meaningful projects.
+      </p>
+      <a class="button" href="#project">Explore My Project ↗</a>
+    </div>
+
+    <div class="scene">
+      <div class="cube">
+        <div class="face front">YS</div>
+        <div class="face back">EEE</div>
+        <div class="face right">⚡</div>
+        <div class="face left">JAVA</div>
+        <div class="face top">01</div>
+        <div class="face bottom">∞</div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      I am Alakunta Yaswanth Surya, an aspiring Electrical and
+      Electronics Engineering professional interested in embedded
+      systems, practical engineering, and web development.
+      I enjoy learning new technologies and building useful projects.
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="grid">
+      <div class="card"><h3>Programming</h3><p>Java</p></div>
+      <div class="card"><h3>Web Technologies</h3><p>HTML, CSS, JavaScript</p></div>
+      <div class="card"><h3>Developer Tools</h3><p>VS Code, Arduino UNO</p></div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Srinivasa Ramanujan Institute of Technology</h3>
+        <p>B.Tech in EEE</p>
+        <p>Anantapur, Andhra Pradesh</p>
+        <p>2020–2024 | Score: 6.71</p>
+      </div>
+      <div class="card">
+        <h3>Sri Chaitanya Junior College</h3>
+        <p>Intermediate, MPC</p>
+        <p>Anantapur, Andhra Pradesh</p>
+        <p>2018–2020 | 68.50%</p>
+      </div>
+      <div class="card">
+        <h3>Sri Chaitanya School</h3>
+        <p>SSC, Anantapur, Andhra Pradesh</p>
+        <p>2017–2018 | 90.25%</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="project">
+    <h2>Featured Project</h2>
+    <div class="card">
+      <h3>Speed Control of Single Phase Induction Motor Using Interactive Display</h3>
+      <p>
+        This project focuses on motor speed control and overheat
+        protection using automated monitoring. An Arduino
+        microcontroller is programmed using Embedded C, and a
+        touch-screen interface allows the user to regulate motor speed.
+      </p>
+      <p><strong>Technologies:</strong> Arduino UNO, Embedded C, Motor Control</p>
+    </div>
+  </section>
+
+  <section id="hobbies">
+    <h2>Hobbies</h2>
+    <div class="grid">
+      <div class="card">✈️ Travelling</div>
+      <div class="card">🏸 Badminton</div>
+      <div class="card">🏏 Cricket</div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card contact-card">
+      <p>Email: <a href="mailto:yaswanthsuryaalakunta@gmail.com">
+        yaswanthsuryaalakunta@gmail.com</a></p>
+
+      <p><a target="_blank" rel="noopener noreferrer"
+        href="https://www.linkedin.com/in/yaswanth-surya-a-bb874526b">
+        LinkedIn ↗</a></p>
+
+      <p><a target="_blank" rel="noopener noreferrer"
+        href="https://x.com/alakunta_surya">Twitter / X ↗</a></p>
+
+      <p><a target="_blank" rel="noopener noreferrer"
+        href="https://www.instagram.com/__alwayssurya__">
+        Instagram ↗</a></p>
+    </div>
+
+    <form id="contactForm" class="card">
+      <h3>Send a Message</h3>
+      <input name="name" placeholder="Your name" maxlength="80" required>
+      <input name="email" type="email" placeholder="Your email" maxlength="254" required>
+      <input name="subject" placeholder="Subject" maxlength="120" required>
+      <textarea name="message" placeholder="Your message" maxlength="3000" required></textarea>
+      <button class="button" type="submit" id="submitBtn">Send Message ↗</button>
+      <p id="formStatus" role="status"></p>
+    </form>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Alakunta Yaswanth Surya
+  </footer>
+</body>
+</html>
